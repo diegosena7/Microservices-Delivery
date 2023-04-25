@@ -1,0 +1,33 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  redis:
+    host: localhost
+    port: 6379
+  cache:
+    type: redis
+
+  sql:
+    init:
+      mode: NEVER
+      platform: h2
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  rabbitmq:
+    host: jackal.rmq.cloudamqp.com
+    port: 5672
+    username: qnqbeuxl
+    password: x2F5gHSlvYkC7VreV6OGg_s8W60hgkOL
+    virtual-host: qnqbeuxl
+
+server:
+  port : 8082
